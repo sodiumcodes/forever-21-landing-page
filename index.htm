@@ -16,7 +16,6 @@
             background:none;
             border-width: 0px;
         }
-        
     </style>
 </head>
 <body style="margin: 0px; padding: 0px; min-width: 800px;" class="container-fluid">
@@ -50,7 +49,7 @@
             </div>
 
             <!-- right side -->
-            <div class="d-flex flex-row align-items-center ps-5 align-items-center" style=" width: 50%;">
+            <div class="container-fluid d-flex flex-row align-items-center ps-5 align-items-center" style=" width: 50%;">
                 <!-- for store location -->
                 <div class="ps-5 ">
                     <span class="bi bi-geo-alt h5 "></span>
@@ -62,10 +61,10 @@
                     <span class="ps-2 pe-3">Contact Us</span>
                 </div>
                 <!-- for login -->
-                <div class="d-flex flex-row">
+                
                     <span class="bi bi-person ps-3 pe-2 mt-2 h5 border-start border-emphasis"></span>
                     <div class="dropdown">
-                        <button style="padding: 0px;" class="btn btn-dark dropdown-toggle mt-1 pt-1 pe-1 " type="button" data-bs-toggle="dropdown" >
+                        <button style="padding: 0px;" class="btn btn-dark mt-1 pt-1 pe-1 " type="button" data-bs-toggle="dropdown" >
                         Log In
                         </button>
                         <ul class="dropdown-menu">
@@ -81,48 +80,82 @@
                 <div class="border-start border-emphasis h5 mt-2">
                     <span class="bi bi-bag ps-2 h5"></span>
                 </div>
-            </div>
+            
         </div>
         </div>
         <!-- header 2 -->
-        <div class="d-flex flex-row align-items-center justify-content-evenly bg-light px-5 py-3">
-            <div><a href=""></a></div>
-            <div class="link ">New Arrivals</div>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle bg-light text-black" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  Women
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#"></a></li>
-                  <li><a class="dropdown-item" href="#"></a></li>
-                  <li><a class="dropdown-item" href="#"></a></li>
-                </ul>
+        <nav class="navbar navbar-expand-lg">
+          <div class="d-flex flex-row ms-5 justify-content-between">
+            <div class="navbar-brand h1 pt-3 text-dark">
+              FOREVER 21
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_content">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main_content">
+              <ul class="nav nav-pills mb-3 " id="pills-tab">
+                <li class="nav-item">
+                  <button class="nav-link text-dark pt-3" id="btn_common" data-bs-toggle="pill" data-bs-target="#new-arrivals">New Arrivals</button>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link text-dark pt-3" id="pills-contact-tab" data-bs-toggle="dropdown" href="#" data-bs-target="#pills-contact" type="button">Women</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link text-dark pt-3" id="pills-contact-tab" data-bs-toggle="dropdown" href="#"   data-bs-target="#pills-contact" type="button">Men</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link text-dark pt-3" id="pills-contact-tab" data-bs-toggle="dropdown" href="#"   data-bs-target="#pills-contact" type="button">Accessories</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link text-dark pt-3" id="btn_common" data-bs-toggle="pill" data-bs-target="#sale" type="button">Sale</button>
+                </li>
+              </ul>
+              <form class="d-flex form_search_btn">
+                <button style="height: 30px; border: none; margin-right: -9px; " class="btn btn-outline-success search-btn text-center" type="submit"><span class="bi bi-search pt-2"></span></button>
+                <input  style="height: 30px; border: none; width: 150px;" class="form-control pt-1" type="search" placeholder="Search">
+              </form>
+              <div class="d-flex flex-row ms-5">
+                <span class="bi bi-truck h1"></span>
+                <div class="text-left ps-3 nav-item dropdown">
+                <span >Express Delivery</span><br>
+                <a class="nav-link text-dark" id="pills-contact-tab" data-bs-toggle="dropdown" href="#" data-bs-target="#pills-contact" type="button"> Choose you nearest Store </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#"><span>SHOP AT YOUR PREFERRED STORE</span><br><span>Experience in-store services at your fingertips</span></a></li>
+                    </ul>
+                </div>
               </div>
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle bg-light text-black" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    Men
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#"></a></li>
-                  <li><a class="dropdown-item" href="#"></a></li>
-                  <li><a class="dropdown-item" href="#"></a></li>
-                </ul>
-              </div>
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle bg-light text-black" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  Accessories
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#"></a></li>
-                  <li><a class="dropdown-item" href="#"></a></li>
-                  <li><a class="dropdown-item" href="#"></a></li>
-                </ul>
-              </div>
-            <div>Sale</div>
-
-        </div>
+              
+            </div>
+            <div>
+          </div>
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade" id="new-arrivals">.ef..</div>
+              <div class="tab-pane fade" id="sale">.sdf..</div>
+            </div>
+         </nav>
      </header>
-    
+     
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap Bundle JS CDN -->
