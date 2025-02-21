@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Forever 21</title>
     <!-- Bootstrap Icons CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Bootstrap CSS CDN -->
@@ -16,152 +16,231 @@
             background:none;
             border-width: 0px;
         }
+        
+        /* Custom media queries */
+        @media (max-width: 991.98px) {
+            .border-lg-start {
+                border-left: none !important;
+            }
+            .header-item {
+                width: 100%;
+                padding: 5px 0;
+            }
+            .ps-lg-3 {
+                padding-left: 0 !important;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .border-lg-start {
+                border-left: 1px solid rgba(255,255,255,0.5) !important;
+            }
+            .ps-lg-3 {
+                padding-left: 1rem !important;
+            }
+        }
+        
+        /* Fix search bar alignment */
+        .form_search_btn {
+            position: relative;
+        }
+        .search-btn {
+            position: absolute;
+            z-index: 5;
+            background: transparent;
+            border: none;
+        }
     </style>
 </head>
-<body style="margin: 0px; padding: 0px; min-width: 800px;" class="container-fluid">
-    <!-- header with marque text -->
-     <header>
-        <marquee class="bg-black text-white" behavior="scroll" direction="left">Download the Forever 21 App to get 500/- off on minium order value of 1500/-. Use code F21APP500
-        </marquee>
-        <div class="bg-dark text-white d-flex" style="height: 35px; margin-top: -6px; padding-left: 2%;">
-            <!-- header 1 -->
-            <!-- left side -->
-            <div class="d-flex flex-row" style="font-size: 10px; width: 50%;">
-                <!--dropdown with brand logos  -->
-                <div class="dropdown">
-                    <button style="height: 1.7em; font-size: 1.4em; " class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" >
-                    More brands
+<body class="container-fluid p-0">
+    <!-- Header with marquee text -->
+    <header>
+        <marquee style="height: 35px;" class="bg-black text-white text-center pt-1" behavior="scroll" direction="left">
+            Download the Forever 21 App to get 500/- off on minium order value of 1500/-. Use code F21APP500
+        </marquee> 
+        
+        <!--Header 1-->
+        <div class="bg-dark text-white" style="margin-top: -5px;">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0">
+                    <!-- Left side content -->
+                    <div class="d-flex align-items-center" style="font-size: 10px;">
+                        <!-- Dropdown with brand logos -->
+                        <div class="dropdown">
+                            <button style="font-size: 1.4em;" class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                More brands
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">LOGO1</a></li>
+                                <li><a class="dropdown-item" href="#">LOGO2</a></li>
+                                <li><a class="dropdown-item" href="#">LOGO3</a></li>
+                                <li><a class="dropdown-item" href="#">LOGO4</a></li>
+                                <li><a class="dropdown-item" href="#">LOGO5</a></li>
+                                <li><a class="dropdown-item" href="#">LOGO6</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Delivery location for desktop -->
+                        <div class="ps-3 border-start border-secondary d-none d-lg-block"> 
+                            <span style="font-size: 0.9em;">Delivering to</span><br>
+                            <a href="#" class="link-light" style="font-size: 1.1em;"><strong>Add Delivery Location</strong></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Toggle button -->
+                    <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#topNavbar">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
-                    <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">LOGO1</a></li>
-                    <li><a class="dropdown-item" href="#">LOGO2</a></li>
-                    <li><a class="dropdown-item" href="#">LOGO3</a></li>
-                    <li><a class="dropdown-item" href="#">LOGO4</a></li>
-                    <li><a class="dropdown-item" href="#">LOGO5</a></li>
-                    <li><a class="dropdown-item" href="#">LOGO6</a></li>
-                    </ul>
-                </div>
-
-                <!--Delivery location  -->
-                <div class="ps-3 border-start border-emphasis" style="font-size: 10px;"> 
-                    <span class="pt-1" style="font-size: 0.9em;">Delivering to</span> <br><a href="#" class="mb-2 link-light text-bold" style="font-size: 1.2em;"> Add Delivery Location</a>
-                </div>
+                    
+                    <!-- Collapsible section -->
+                    <div class="collapse navbar-collapse" id="topNavbar">
+                        <!-- Delivery location for mobile -->
+                        <div class="ps-3 d-block d-lg-none my-2"> 
+                            <span style="font-size: 0.9em;">Delivering to</span><br>
+                            <a href="#" class="link-light" style="font-size: 1.1em;"><strong>Add Delivery Location</strong></a>
+                        </div>
+                        
+                        <!-- Right side items -->
+                        <ul class="navbar-nav ms-auto d-flex flex-column flex-lg-row align-items-start align-items-lg-center">
+                            <li class="nav-item header-item">
+                                <span class="bi bi-geo-alt h5"></span>
+                                <span class="ps-2 pe-3">Stores</span>
+                            </li>
+                            
+                            <li class="nav-item header-item border-lg-start">
+                                <span class="bi bi-info-square ps-lg-3 h5"></span>
+                                <span class="ps-2 pe-3">Contact Us</span>
+                            </li>
+                            
+                            <li class="nav-item header-item border-lg-start">
+                                <div class="d-flex align-items-center">
+                                    <span class="bi bi-person ps-lg-3 pe-2 fs-4"></span>
+                                    <div class="dropdown">
+                                        <button class="btn btn-dark ps-0 pe-2" type="button" data-bs-toggle="dropdown">
+                                            Log In
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Sign In</a></li>
+                                            <li><a class="dropdown-item" href="#">Register</a></li>
+                                            <li><a class="dropdown-item" href="#">My Account</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <li class="nav-item header-item border-lg-start">
+                                <span class="bi bi-heart ps-lg-2 pe-2 pt-2 fs-4"></span>
+                            </li>
+                            
+                            <li class="nav-item header-item border-lg-start">
+                                <span class="bi bi-bag ps-lg-2 pt-2 fs-4"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
             </div>
-
-            <!-- right side -->
-            <div class="container-fluid d-flex flex-row align-items-center ps-5 align-items-center" style=" width: 50%;">
-                <!-- for store location -->
-                <div class="ps-5 ">
-                    <span class="bi bi-geo-alt h5 "></span>
-                    <span class="ps-2 pe-3">Stores</span>
-                </div>
-                <!-- for inqury -->
-                <div class="border-start border-emphasis"> 
-                    <span class="bi bi-info-square ps-3 h5 "></span>
-                    <span class="ps-2 pe-3">Contact Us</span>
-                </div>
-                <!-- for login -->
+        </div>
+        
+        <!--Header 2-->
+        <nav class="navbar navbar-expand-lg bg-white">
+            <div class="container-fluid">
+                <!-- Brand logo -->
+                <a class="navbar-brand h1 text-dark" href="#">FOREVER 21</a>
                 
-                    <span class="bi bi-person ps-3 pe-2 mt-2 h5 border-start border-emphasis"></span>
-                    <div class="dropdown">
-                        <button style="padding: 0px;" class="btn btn-dark mt-1 pt-1 pe-1 " type="button" data-bs-toggle="dropdown" >
-                        Log In
-                        </button>
-                        <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">LOGO1</a></li>
-                        <li><a class="dropdown-item" href="#">LOGO2</a></li>
-                        <li><a class="dropdown-item" href="#">LOGO3</a></li>
-                </div>
-                <!-- for wishlist -->
-                <div class="border-start border-emphasis h5 mt-2">
-                    <span class="bi bi-heart ps-2 pe-2 h5 mt-1"></span>
-                </div>
-                <!-- for add to cart -->
-                <div class="border-start border-emphasis h5 mt-2">
-                    <span class="bi bi-bag ps-2 h5"></span>
-                </div>
-            
-        </div>
-        </div>
-        <!-- header 2 -->
-        <nav class="navbar navbar-expand-lg">
-          <div class="d-flex flex-row ms-5 justify-content-between">
-            <div class="navbar-brand h1 pt-3 text-dark">
-              FOREVER 21
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_content">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="main_content">
-              <ul class="nav nav-pills mb-3 " id="pills-tab">
-                <li class="nav-item">
-                  <button class="nav-link text-dark pt-3" id="btn_common" data-bs-toggle="pill" data-bs-target="#new-arrivals">New Arrivals</button>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link text-dark pt-3" id="pills-contact-tab" data-bs-toggle="dropdown" href="#" data-bs-target="#pills-contact" type="button">Women</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Separated link</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link text-dark pt-3" id="pills-contact-tab" data-bs-toggle="dropdown" href="#"   data-bs-target="#pills-contact" type="button">Men</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Separated link</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link text-dark pt-3" id="pills-contact-tab" data-bs-toggle="dropdown" href="#"   data-bs-target="#pills-contact" type="button">Accessories</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Separated link</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <button class="nav-link text-dark pt-3" id="btn_common" data-bs-toggle="pill" data-bs-target="#sale" type="button">Sale</button>
-                </li>
-              </ul>
-              <form class="d-flex form_search_btn">
-                <button style="height: 30px; border: none; margin-right: -9px; " class="btn btn-outline-success search-btn text-center" type="submit"><span class="bi bi-search pt-2"></span></button>
-                <input  style="height: 30px; border: none; width: 150px;" class="form-control pt-1" type="search" placeholder="Search">
-              </form>
-              <div class="d-flex flex-row ms-5">
-                <span class="bi bi-truck h1"></span>
-                <div class="text-left ps-3 nav-item dropdown">
-                <span >Express Delivery</span><br>
-                <a class="nav-link text-dark" id="pills-contact-tab" data-bs-toggle="dropdown" href="#" data-bs-target="#pills-contact" type="button"> Choose you nearest Store </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#"><span>SHOP AT YOUR PREFERRED STORE</span><br><span>Experience in-store services at your fingertips</span></a></li>
+                <!-- Toggle button -->
+                <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Collapsible section -->
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#" data-bs-toggle="pill" data-bs-target="#new-arrivals">New Arrivals</a>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark" href="#" role="button" data-bs-toggle="dropdown">
+                                Women
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"></a></li>
+                                <li><a class="dropdown-item" href="#"></a></li>
+                                <li><a class="dropdown-item" href="#"></a></li>
+                                
+                                
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark" href="#" role="button" data-bs-toggle="dropdown">
+                                Men
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"></a></li>
+                                <li><a class="dropdown-item" href="#"></a></li>
+                                <li><a class="dropdown-item" href="#"></a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark" href="#" role="button" data-bs-toggle="dropdown">
+                                Accessories
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"></a></li>
+                                <li><a class="dropdown-item" href="#"></a></li>
+                                <li><a class="dropdown-item" href="#"></a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#" data-bs-toggle="pill" data-bs-target="#sale">Sale</a>
+                        </li>
                     </ul>
+                    
+                    <!-- Search bar -->
+                    <div class="d-flex align-items-center mb-3 mb-lg-0">
+                        <form class="form_search_btn me-2 d-flex">
+                          <span class="bi bi-search pt-1"></span>
+                            <button style="height: 30px; border: none;" class="btn search-btn text-center " type="submit">
+                            </button>
+                            <input style="height: 30px; border: none; width: 150px;" class="form-control pe-4" type="search" placeholder="Search">
+                        </form>
+                    </div>
+                    
+                    <!-- Express delivery -->
+                    <div class="d-flex flex-row align-items-center mt-2 mt-lg-0">
+                        <span class="bi bi-truck h2 mb-0"></span>
+                        <div class="ps-3 nav-item dropdown">
+                            <span>Express Delivery</span><br>
+                            <a class="nav-link text-dark p-0" href="#" role="button" data-bs-toggle="dropdown">
+                                Choose your nearest Store
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <span class="fw-bold">SHOP AT YOUR PREFERRED STORE</span><br>
+                                        <span>Experience in-store services at your fingertips</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              
             </div>
-            <div>
-          </div>
+            
+            <!-- Tab content -->
             <div class="tab-content" id="pills-tabContent">
-              <div class="tab-pane fade" id="new-arrivals">.ef..</div>
-              <div class="tab-pane fade" id="sale">.sdf..</div>
+                <div class="tab-pane fade" id="new-arrivals">New arrivals content will appear here</div>
+                <div class="tab-pane fade" id="sale">Sale content will appear here</div>
             </div>
-         </nav>
-     </header>
+        </nav>
+    </header>
      
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap Bundle JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript">
-
-    </script>
 </body>
 </html>
